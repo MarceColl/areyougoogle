@@ -46,6 +46,8 @@
              (set-on-click btn
               #'(lambda (obj)
                   (remove-class sassy "hidden")
+                  (setf (text obj) "No")
+                  (setf (text other) "Yes")
                   (if (string= (text obj) "No")
                       (setf (text sassy) (nth (random (length sentences)) sentences))
                       (setf (text sassy) "I doubt it"))
